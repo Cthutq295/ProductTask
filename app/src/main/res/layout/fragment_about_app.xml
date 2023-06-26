@@ -26,8 +26,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Открыть сайт в браузере?"
-        android:textColor="#22C8F3"
-        android:textSize="16sp"
+        android:text="Сайт компании"
+        android:textColor="#90E6FD"
+        android:textSize="20sp"
         android:textStyle="" />
 </LinearLayout>
