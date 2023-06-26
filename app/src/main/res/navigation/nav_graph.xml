@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.lazy.producttask.ui.ProductListFragment"
+        android:label="@string/product_title_fragment"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productListFragment_to_productInfoFragment"
+            app:destination="@id/productInfoFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productInfoFragment"
+        android:name="com.lazy.producttask.ui.ProductInfoFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_product_info">
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="product"
+            app:argType="com.lazy.producttask.model.ProductItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.lazy.producttask.ui.AboutAppFragment"
+        android:label="@string/about_company"
+        tools:layout="@layout/fragment_about_app" />
+</navigation>
