@@ -23,7 +23,7 @@ class ProductListAdapter(
                 if (position != RecyclerView.NO_POSITION) {
                     val product = getItem(position)
                     if (product != null) {
-                        listener.onProductClick(product)
+                        listener.onProductItemClick(product)
                     }
                 }
             }
@@ -66,6 +66,6 @@ class ProductListAdapter(
     }
 
     interface OnProductClickListener {
-        fun onProductClick(item: ProductItem)
+        fun onProductItemClick(item: ProductItem)
     }
 }

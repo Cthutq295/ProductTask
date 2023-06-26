@@ -1,7 +1,6 @@
 package com.lazy.producttask.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -48,7 +47,7 @@ class ProductListFragment : Fragment(R.layout.fragment_product_list),
         }
     }
 
-    override fun onProductClick(item: ProductItem) {
+    override fun onProductItemClick(item: ProductItem) {
         val direction =
             ProductListFragmentDirections.actionProductListFragmentToProductInfoFragment(
                 item.title,
