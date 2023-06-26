@@ -16,10 +16,9 @@ class ProductInfoFragment : Fragment(R.layout.fragment_product_info) {
         val binding = FragmentProductInfoBinding.bind(view)
         val args = arguments
         val product: ProductItem = args!!.getParcelable("product")!!
-        val priceInRub: String = (product.price.toFloat()*70).toString()
 
         binding.tvProductName.text = product.title
-        binding.tvProductPrice.text = "Цена: " + priceInRub + " Руб."
+        binding.tvProductPrice.text = "Price: " + product.price + " $"
         binding.tvProductDescription.text = product.description
 
         Glide.with(requireContext())

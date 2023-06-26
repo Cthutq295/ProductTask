@@ -29,10 +29,9 @@ class ProductListAdapter(
             }
 
             binding.apply {
-                tvProductId.text = "Номер товара: " + product.id.toString()
+                tvProductId.text = "Product's ID: " + product.id.toString()
                 tvProductName.text = product.title
-                val priceInRub = (product.price.toFloat() * 70).toString()
-                tvProductPrice.text = "Цена: " + priceInRub + " Руб."
+                tvProductPrice.text = "Price: " + product.price + " $"
 
                 Glide.with(context)
                     .load(product.image)
