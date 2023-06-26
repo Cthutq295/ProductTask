@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lazy.producttask.R
@@ -36,9 +35,9 @@ class ProductListFragment : Fragment(R.layout.fragment_product_list),
 
         viewModel.getAllProducts()
 
-        viewModel.products.observe(viewLifecycleOwner, Observer {
+        viewModel.products.observe(viewLifecycleOwner) {
             productListAdapter.submitList(it)
-        })
+        }
     }
 
     override fun onProductClick(item: ProductItem) {
