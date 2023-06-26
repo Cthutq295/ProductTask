@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">ProductTask</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="product_title_fragment">Список продуктов</string>
     <string name="about_company">О компании</string>
+    <string name="list_is_empty">Тут ничего нет :(</string>
 
 </resources>

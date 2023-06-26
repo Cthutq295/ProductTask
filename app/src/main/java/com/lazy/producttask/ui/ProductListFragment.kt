@@ -37,12 +37,23 @@ class ProductListFragment : Fragment(R.layout.fragment_product_list),
 
         viewModel.products.observe(viewLifecycleOwner) {
             productListAdapter.submitList(it)
+
+            if (productListAdapter.itemCount >= 0) {
+                binding.rvProductList.visibility = View.VISIBLE
+                binding.tvListIsEmpty.visibility = View.GONE
+            } else {
+                binding.rvProductList.visibility = View.GONE
+                binding.tvListIsEmpty.visibility = View.VISIBLE
+            }
         }
     }
 
     override fun onProductClick(item: ProductItem) {
         val direction =
-            ProductListFragmentDirections.actionProductListFragmentToProductInfoFragment(item.title, item)
+            ProductListFragmentDirections.actionProductListFragmentToProductInfoFragment(
+                item.title,
+                item
+            )
         findNavController().navigate(direction)
     }
 
